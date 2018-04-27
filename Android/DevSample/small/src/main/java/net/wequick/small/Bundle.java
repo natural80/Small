@@ -463,12 +463,12 @@ public class Bundle {
         if (outFile.exists()) {
             // Compare the two input steams to see if needs re-extract.
             FileInputStream fin = new FileInputStream(outFile);
-            int inSize = in.available();
-            long outSize = fin.available();
-            if (inSize == outSize) {
-                // FIXME: What about the size is same but the content is different?
-                return; // UP-TO-DATE
-            }
+            // int inSize = in.available();
+            // long outSize = fin.available();
+            // if (inSize == outSize) {
+            //     // FIXME: What about the size is same but the content is different?
+            //     return; // UP-TO-DATE
+            // }
 
             out = new FileOutputStream(outFile);
         } else {
